@@ -1,6 +1,9 @@
+// function sayHello(name: string): string {
+//   return `Hello, ${name}`;
+// }
+// const myName: string = "빈영";
+// console.log(sayHello(myName));
 function sayHello(name) {
     return `Hello, ${name}`;
 }
-const myName = "빈영";
-console.log(sayHello(myName));
 export {};

@@ -3,7 +3,8 @@ async function fetchData(url) {
     if (!response.ok) {
         throw new Error(`Error #1: ${response.status}`);
     }
-    return response.json();
+    const data = response.json();
+    return data;
 }
 function validateData(data) {
     if (!data) {
@@ -33,7 +34,12 @@ async function movies() {
         printData(result);
     }
     catch (error) {
-        console.log(error);
+        if (error instanceof Error) {
+            console.log(`Error #2: ${error.message}`);
+        }
+        else {
+            console.log("Error #2: Unknown Error");
+        }
     }
 }
 movies();
